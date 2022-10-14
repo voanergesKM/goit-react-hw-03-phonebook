@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { FormWrapper } from './FormWrapper.styled';
+
 import { FormTitle } from './FormTitle';
 import { SearchInput } from './SearchInput.styled';
 import { Button } from '../Button/Button';
+import { Box } from 'components/Box';
 
 export class ContactForm extends Component {
   state = { name: '', number: '' };
@@ -18,7 +19,7 @@ export class ContactForm extends Component {
     const { name, number } = this.state;
 
     return (
-      <FormWrapper>
+      <Box p={4} border="normal" maxWidth="400px" mb={5}>
         <form
           onSubmit={evt => {
             this.props.onConfirmAddFriend(evt, name, number);
@@ -50,7 +51,7 @@ export class ContactForm extends Component {
           </FormTitle>
           <Button type="submit" text="Add contact" />
         </form>
-      </FormWrapper>
+      </Box>
     );
   }
 }
