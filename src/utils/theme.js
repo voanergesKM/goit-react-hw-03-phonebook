@@ -15,6 +15,7 @@ export const theme = {
     primary: '#07c',
     secondary: '#30c',
     muted: '#f6f6f6',
+    error: 'orangered',
   },
 
   lineHeights: {
