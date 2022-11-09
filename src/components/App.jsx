@@ -45,7 +45,7 @@ export class App extends Component {
     );
 
     if (findedContact) {
-      alert(`${name} is already in contacts`);
+      alert(`${findedContact.name} is already in contacts`);
       return;
     } else {
       this.setState(prevState => ({
